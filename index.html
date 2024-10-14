@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitive Exam Data - Sgsits</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+
+    <script src="script.js" defer></script> <!-- Added defer to ensure the script runs after the DOM is loaded -->
+</head>
+<body>
+    <div class="title-box">
+        <h1>Competitive Exam Data - Sgsits</h1>
+        <hr>
+    </div>
+
+    <div class="filter-box">
+        <div class="custom-dropdown" id="examDropdown">
+            <button class="dropdown-button">Exam</button>
+            <div class="dropdown-content">
+                <label><input type="checkbox" value="gate"> GATE</label>
+                <label><input type="checkbox" value="cat"> CAT</label>
+            </div>
+        </div>
+        <div class="custom-dropdown" id="branchDropdown">
+            <button class="dropdown-button">Branch</button>
+            <div class="dropdown-content">
+                <label><input type="checkbox" value="cse"> CSE</label>
+                <label><input type="checkbox" value="bme"> BME</label>
+                <label><input type="checkbox" value="ee"> EE</label>
+                <label><input type="checkbox" value="ec"> EC</label>
+                <label><input type="checkbox" value="ei"> EI</label>
+                <label><input type="checkbox" value="mech"> MECH</label>
+                <label><input type="checkbox" value="ce"> CE</label>
+                <label><input type="checkbox" value="ipe"> IPE</label>
+            </div>
+        </div>
+        <div class="custom-dropdown" id="batchDropdown">
+            <button class="dropdown-button">Batch</button>
+            <div class="dropdown-content">
+                <label><input type="checkbox" value="2018"> 2018</label>
+                <label><input type="checkbox" value="2019"> 2019</label>
+                <label><input type="checkbox" value="2020"> 2020</label>
+                <label><input type="checkbox" value="2021"> 2021</label>
+                <label><input type="checkbox" value="2022"> 2022</label>
+                <label><input type="checkbox" value="2023"> 2023</label>
+                <label><input type="checkbox" value="2024"> 2024</label>
+                <label><input type="checkbox" value="2025"> 2025</label>
+                <label><input type="checkbox" value="2026"> 2026</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="upload-link">
+        <a href="upload.html">Upload GATE Result PDF</a>
+    </div>
+
+    <div class="table"></div>
+</body>
+</html>

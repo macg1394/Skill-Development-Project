@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload GATE Result PDF</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Include necessary libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.15.349/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.15.349/pdf.worker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    
+    <!-- Load your custom script after the libraries -->
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <div class="title-box">
+        <h1>Upload GATE Result PDF</h1>
+        <hr>
+    </div>
+
+    <div class="upload-box">
+        <label for="uploadPdf" class="upload-label">Upload GATE Result PDF:</label>
+        <input type="file" id="uploadPdf" accept=".pdf">
+        <button id="processPdf">Extract Data</button>
+    </div>
+
+    <script>
+        document.getElementById('processPdf').addEventListener('click', () => {
+            const pdfFile = document.getElementById('uploadPdf').files[0];
+            if (pdfFile) {
+                // Your PDF extraction logic goes here
+                console.log('PDF file selected:', pdfFile);
+                // Implement PDF.js logic to extract and process the content of the file
+            } else {
+                alert('Please upload a PDF file.');
+            }
+        });
+    </script>
+</body>
+</html>
